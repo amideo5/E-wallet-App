@@ -1,0 +1,30 @@
+import React from 'react'
+import { Navbar,Nav } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container'
+
+const NavigationBar = () => {
+
+    const handleLogout = () => {
+        localStorage.removeItem('token')
+    }
+
+    return (
+        <Navbar className="m-0 py-3" collapseOnSelect expand="lg" bg="primary" variant="dark">
+          <Container fluid>
+            <Navbar.Brand href="/welcome">NEX E-Wallet</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="/welcome">Dashboard</Nav.Link>
+                <Nav.Link href="/transactions">Transaction Statement</Nav.Link>
+              </Nav>
+              <Nav>
+                <Nav.Link onClick={handleLogout} href="/"><i class="fa fa-power-off fa-2x"></i></Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+      </Navbar>
+    );
+}
+
+export default NavigationBar

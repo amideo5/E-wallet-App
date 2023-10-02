@@ -1,0 +1,23 @@
+.form-container-landing{
+    background-color: #00ffe1;
+  text-align: center;
+  height: 100vh;
+  
+}
+.margin{
+    margin-top: 18em;
+}
+h3 {
+    /* margin: 20px; */
+    font-family: "Paytone One";
+    color: #202020;
+    letter-spacing: -2px;
+  }
+  
+  h3 span {
+    display: block;
+    margin: 11px 0 17px 0;
+    font-size: 80px;
+    line-height: 80px;
+    color: #000000;
+  }
